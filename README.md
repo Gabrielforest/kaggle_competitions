@@ -1,2 +1,2 @@
-# kaggle_competitions
+# Kaggle Competitions
 My kaggle competitions scripts
