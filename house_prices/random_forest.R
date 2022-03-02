@@ -1,8 +1,8 @@
 library(randomForest)
 
-train <- read.csv("./train.csv")
-test <- read.csv("./test.csv")
-submission <- read.csv("./sample_submission.csv")
+train <- read.csv("./house_prices/train.csv")
+test <- read.csv("./house_prices/test.csv")
+submission <- read.csv("./house_prices/sample_submission.csv")
 
 # removendo ID:
 train <- train[, -1]
