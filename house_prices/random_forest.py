@@ -1,4 +1,3 @@
-from turtle import end_fill
 import numpy as np 
 import pandas as pd 
 import matplotlib.pyplot as plt
@@ -12,6 +11,7 @@ os.listdir()
 os.chdir('C:\\Users\\OppenSocial\\Desktop\\kaggle_competitions\\house_prices')
 
 # importando os dados
+submission = pd.read_csv('./submission.csv')
 train = pd.read_csv('./train.csv')
 test = pd.read_csv('./test.csv')
 train.head()
@@ -72,4 +72,5 @@ plt.plot(y_test, color = 'red')
 plt.plot(y_pred, color = 'blue')
 plt.show()
 
-
+s = pd.DataFrame({"id":test['Id'], "SalePrice":y_pred})
+s.to_csv("submission_python.csv", index = False)
