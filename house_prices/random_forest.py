@@ -5,13 +5,14 @@ import seaborn as sns
 import sklearn
 import os
 
+
 # diretório
 os.getcwd()
 os.listdir()
 os.chdir('C:\\Users\\OppenSocial\\Desktop\\kaggle_competitions\\house_prices')
 
 # importando os dados
-submission = pd.read_csv('./submission.csv')
+submission = pd.read_csv('./submission_python.csv')
 train = pd.read_csv('./train.csv')
 test = pd.read_csv('./test.csv')
 train.head()
@@ -66,9 +67,8 @@ regressor.fit(X_train, y_train)
 
 # previsão:
 y_pred = regressor.predict(X_test)
-# y de teste e y predito
+# y predito
 plt.figure(figsize = (12))
-plt.plot(y_test, color = 'red')
 plt.plot(y_pred, color = 'blue')
 plt.show()
 
